@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 def describe_dataframe(events_csv_df):
-     # print(events_csv_df.shape)
-     # print(events_csv_df.head , events_csv_df.tail)
-     # print(events_csv_df.columns)
-     print(events_csv_df.dtypes)
-     # print(events_csv_df.info)
-     # print(events_csv_df.describe)
+    # print(events_csv_df.shape)
+    # print(events_csv_df.head , events_csv_df.tail)
+    # print(events_csv_df.columns)
+    print(events_csv_df.dtypes)
+    # print(events_csv_df.info)
+    # print(events_csv_df.describe)
 
 
 def prepare_data(events_csv_df):
@@ -81,8 +81,6 @@ def identify_and_handle_outliers(events_csv_df, column):
     # 识别并删除异常值
     df_cleaned = events_csv_df[(events_csv_df[column] >= lower_bound) & (events_csv_df[column] <= upper_bound)]
     return df_cleaned
-
-
 
 
 if __name__ == '__main__':
